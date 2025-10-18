@@ -2,8 +2,8 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 
-const PORT = process.env.PORT;
-const env = process.env.ENV_TYPE;
+const PORT = process.env.PORT || 5000;
+const env = process.env.ENV_TYPE || "production";
 
 app.get("/", (req, res) => {
   res.send("Works");
